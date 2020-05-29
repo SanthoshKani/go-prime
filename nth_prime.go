@@ -26,7 +26,7 @@ func primeHandler(w http.ResponseWriter, r *http.Request) {
 	query := r.URL.Query()
 	computeQryParam := query.Get("compute")
 	if computeQryParam == "" {
-		http.Error(w, "Please provide the nth value via computeQryParam query parameter.",
+		http.Error(w, "Please provide the nth value via '?compute=' query parameter.",
 			http.StatusBadRequest)
 		return
 	}
